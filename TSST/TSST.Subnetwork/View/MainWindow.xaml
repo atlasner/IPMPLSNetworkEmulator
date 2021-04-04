@@ -1,0 +1,15 @@
+﻿<Window x:Class="TSST.Subnetwork.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:guiExtensions="clr-namespace:TSST.Shared.GuiExtensions;assembly=TSST.Shared"
+        mc:Ignorable="d"
+        Title="{Binding WindowTitle}" 
+        Height="366.955" Width="524.544"
+        ResizeMode="NoResize"
+        DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
+    <Grid Height="329" VerticalAlignment="Top" HorizontalAlignment="Left" Width="522">
+        <guiExtensions:ScrollingListBox ItemsSource="{Binding Logs, UpdateSourceTrigger=PropertyChanged}" Margin="10,10,21,0" Height="313" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
